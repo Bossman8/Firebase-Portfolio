@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/logo.png" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../public/js/jquery.waypoints.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <title>Boston Jones</title>
+</head>
+
+<body>
+    <!-- sidenav -->
+    <ul id="slide-out" class="sidenav grey" id="top">
+        <li>
+            <div class="user-view">
+                <img src="./assets/images/profile.jpeg" alt="" class="circle center" />
+                <h4>Boston Jones</h4>
+
+                <a href="#top"><span class="white-text name sidenav-close">Home </span></a>
+                <a href="#about"><span class="white-text name sidenav-close">About Me</span></a>
+                <a href="#portfolio"><span class="white-text name sidenav-close">Portfolio</span></a>
+                <a href="#contact"><span class="white-text name sidenav-close">Contact Me</span></a>
+                <a class="waves-effect waves-light modal-trigger white-text sidenav-close" href="#modal1"
+                    id="resume">Resume</a>
+                <a href="#email"><span class="white-text email">jones.boston8@gmail.com</span></a>
+            </div>
+        </li>
+        <hr style="width: 80%" />
+        <div id="menuMedia">
+            <a target="_blank" href="https://www.facebook.com/boston.jones.77"
+                style="color: black; margin: 5px; margin-left: 25%" class="fa fa-facebook-square sidenav-close"></a>
+            <a target="_blank" href="https://github.com/Bossman8" style="color: black; margin: 5px"
+                class="fa fa-github sidenav-close"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/boston-jones-84303489/"
+                style="color: black; margin: 5px" class="fa fa-linkedin-square sidenav-close"></a>
+            <a target="_blank" href="https://twitter.com/BostonJones7" style="color: black; margin: 5px"
+                class="fa fa-twitter-square sidenav-close"></a>
+        </div>
+    </ul>
+
+    <!-- modal -->
+    <div id="modal1" class="modal">
+        <div class="modal-content" id="modal">
+            <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=hi2uqw23f2" width="100%" height="480"
+                seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+        </div>
+    </div>
+
+    <!-- menu button -->
+    <a href="#" data-target="slide-out" id="menuBtn" class="sidenav-trigger right animated pulse slow"><i
+            class="material-icons">menu</i></a>
+    <div class="col s12 12">
+        <img src="./assets/images/stars.jpg" alt="" style="width: 102%" class="responsive-img" id="stars" />
+    </div>
+    <div class="row" id="main" style="height: 700px">
+        <div class="col s12 14 offset-11" id="about">
+            <h1 class="white-text center" id="name">Boston Jones</h1>
+            <h5 id="name" class="center white-text">
+                I am a Fullstack Developer from St. George, Utah. I enjoy creating
+                neat and user-friendly applications.
+            </h5>
+            <a href="#modal1" class="center btn white-text grey modal-trigger"
+                style="left: 45%; margin-top: 10px !important; opacity: 0.8" id="name">Resume</a>
+            <div class="scrolldown">
+                <a id="scroll" href="#about" class="scroll-icon smoothscroll animated bounce slow">
+                    Scroll Down
+                    <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="center" style="top: -200px !important; position: relative; height: 100%">
+                <h2 style="opacity: 0" class="animated" id="aboutMe">About Me</h2>
+                <img src="./assets/images/profile.jpeg" alt="" class="circle" style="height: 140px; top: -50px" />
+                <div class="center" style="width: 80%; position: relative; left: 10%">
+                    <h5 style="opacity: 0" class="animated" id="experience">
+                        I'm a Assistant Developer currently working with a Vue.js frontend
+                        and a Django backend. I love building user-friendly software that
+                        is helpful to others. I am a fullstack developer with skills in
+                        Python, Django, JavaScript, Node, Express, mySQL, React, Vue, HTML
+                        & CSS.
+                    </h5>
+                    <hr />
+                    <h5 style="opacity: 0" class="animated" id="experience1">
+                        If you would like to learn more about me or my programming skills,
+                        please reach out anytime!
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio" style="height: 100%">
+        <h3 class="center white-text" style="font-family: cursive; opacity: 0.5">
+            Portfolio
+        </h3>
+        <div></div>
+        <h2 class="center white-text">Checkout some of my recent work!</h2>
+        <hr style="width: 80%" ; />
+        <div id="recentWork">
+            <div class="row center">
+                <div class="col 12 offset-3" style="margin-top: 60px">
+                    <a href=" https://bossman8.github.io/weatherAndNews/" target="_blank"><img style="opacity: 0"
+                            class="animated" id="weather" src="./assets/images/directNew.png" alt="" /></a>
+                    <a href="https://friendsfind.herokuapp.com/" target="_blank"><img style="opacity: 0"
+                            class="animated" id="friend" src="./assets/images/friendfinder.png" alt="" /></a>
+                    <a href="http://jdfitnesspal.com" target="_blank">
+                        <img style="opacity: 0" class="animated" id="fitness" src="./assets/images/jdfitnesspal.png"
+                            alt="" /></a>
+                    <a href="http://www.krollstone.com" target="_blank"><img style="opacity: 0" class="animated"
+                            id="rock" src="./assets/images/KrollStone.png" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center" id="contact" style="background-image: url(./assets/images/contact.jpg)">
+        <h2 class="center white-text">Contact</h2>
+        <hr class="center" style="width: 30%" />
+        <div class="container white" style="opacity: 0.4; margin-bottom: 100px; width: 60%">
+            <div>
+                <form action="https://formspree.io/xyygwkvg" method="POST">
+                    <label class="black-text" for="lname">Name</label>
+                    <input class="center" type="text" id="fullName" name="name" />
+
+                    <label class="black-text" for="email">Your Email</label>
+                    <input class="center" type="email" id="email" name="replyto" />
+
+                    <label class="black-text" for="lname">Subject</label>
+                    <input class="center" type="text" id="subject" name="subject" />
+
+                    <label class="black-text" for="subject">Message</label>
+                    <textarea id="subject" name="message" style="height: 200px"></textarea>
+
+                    <input class="black white-text btn" type="submit" name="submit" value="Send" style="margin: 5px" />
+                    <input class="black white-text btn" type="reset" name="reset" value="Reset"
+                        onclick="return resetForm(this.form);" style="margin: 5px" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h4 class="white-text">Boston Jones</h4>
+                    <hr class="grey" />
+                    <p class="grey-text">Email: jones.boston8@gmail.com</p>
+                    <p class="grey-text">Phone: 435-525-7255</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Find Me On:</h5>
+                    <ul>
+                        <li>
+                            <a target="_blank" class="grey-text text-lighten-3"
+                                href="https://www.facebook.com/boston.jones.77">Facebook</a>
+                        </li>
+                        <li>
+                            <a target="_blank" class="grey-text text-lighten-3"
+                                href="https://www.linkedin.com/in/boston-jones-84303489/">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a target="_blank" class="grey-text text-lighten-3"
+                                href="https://twitter.com/BostonJones7">Twitter</a>
+                        </li>
+                        <li>
+                            <a target="_blank" class="grey-text text-lighten-3"
+                                href="https://github.com/Bossman8">GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container"></div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/waypoints.js"></script>
+    <script>
+        /*!
+  Waypoints - 4.0.1
+  Copyright © 2011-2016 Caleb Troughton
+  Licensed under the MIT license.
+  https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
+  */
+        !(function () {
+            "use strict";
+            function t(o) {
+                if (!o) throw new Error("No options passed to Waypoint constructor");
+                if (!o.element)
+                    throw new Error("No element option passed to Waypoint constructor");
+                if (!o.handler)
+                    throw new Error("No handler option passed to Waypoint constructor");
+                (this.key = "waypoint-" + e),
+                    (this.options = t.Adapter.extend({}, t.defaults, o)),
+                    (this.element = this.options.element),
+                    (this.adapter = new t.Adapter(this.element)),
+                    (this.callback = o.handler),
+                    (this.axis = this.options.horizontal ? "horizontal" : "vertical"),
+                    (this.enabled = this.options.enabled),
+                    (this.triggerPoint = null),
+                    (this.group = t.Group.findOrCreate({
+                        name: this.options.group,
+                        axis: this.axis,
+                    })),
+                    (this.context = t.Context.findOrCreateByElement(
+                        this.options.context
+                    )),
+                    t.offsetAliases[this.options.offset] &&
+                    (this.options.offset = t.offsetAliases[this.options.offset]),
+                    this.group.add(this),
+                    this.context.add(this),
+                    (i[this.key] = this),
+                    (e += 1);
+            }
+            var e = 0,
+                i = {};
+            (t.prototype.queueTrigger = function (t) {
+                this.group.queueTrigger(this, t);
+            }),
+                (t.prototype.trigger = function (t) {
+                    this.enabled && this.callback && this.callback.apply(this, t);
+                }),
+                (t.prototype.destroy = function () {
+                    this.context.remove(this),
+                        this.group.remove(this),
+                        delete i[this.key];
+                }),
+                (t.prototype.disable = function () {
+                    return (this.enabled = !1), this;
+                }),
+                (t.prototype.enable = function () {
+                    return this.context.refresh(), (this.enabled = !0), this;
+                }),
+                (t.prototype.next = function () {
+                    return this.group.next(this);
+                }),
+                (t.prototype.previous = function () {
+                    return this.group.previous(this);
+                }),
+                (t.invokeAll = function (t) {
+                    var e = [];
+                    for (var o in i) e.push(i[o]);
+                    for (var n = 0, r = e.length; r > n; n++) e[n][t]();
+                }),
+                (t.destroyAll = function () {
+                    t.invokeAll("destroy");
+                }),
+                (t.disableAll = function () {
+                    t.invokeAll("disable");
+                }),
+                (t.enableAll = function () {
+                    t.Context.refreshAll();
+                    for (var e in i) i[e].enabled = !0;
+                    return this;
+                }),
+                (t.refreshAll = function () {
+                    t.Context.refreshAll();
+                }),
+                (t.viewportHeight = function () {
+                    return window.innerHeight || document.documentElement.clientHeight;
+                }),
+                (t.viewportWidth = function () {
+                    return document.documentElement.clientWidth;
+                }),
+                (t.adapters = []),
+                (t.defaults = {
+                    context: window,
+                    continuous: !0,
+                    enabled: !0,
+                    group: "default",
+                    horizontal: !1,
+                    offset: 0,
+                }),
+                (t.offsetAliases = {
+                    "bottom-in-view": function () {
+                        return this.context.innerHeight() - this.adapter.outerHeight();
+                    },
+                    "right-in-view": function () {
+                        return this.context.innerWidth() - this.adapter.outerWidth();
+                    },
+                }),
+                (window.Waypoint = t);
+        })(),
+            (function () {
+                "use strict";
+                function t(t) {
+                    window.setTimeout(t, 1e3 / 60);
+                }
+                function e(t) {
+                    (this.element = t),
+                        (this.Adapter = n.Adapter),
+                        (this.adapter = new this.Adapter(t)),
+                        (this.key = "waypoint-context-" + i),
+                        (this.didScroll = !1),
+                        (this.didResize = !1),
+                        (this.oldScroll = {
+                            x: this.adapter.scrollLeft(),
+                            y: this.adapter.scrollTop(),
+                        }),
+                        (this.waypoints = { vertical: {}, horizontal: {} }),
+                        (t.waypointContextKey = this.key),
+                        (o[t.waypointContextKey] = this),
+                        (i += 1),
+                        n.windowContext ||
+                        ((n.windowContext = !0), (n.windowContext = new e(window))),
+                        this.createThrottledScrollHandler(),
+                        this.createThrottledResizeHandler();
+                }
+                var i = 0,
+                    o = {},
+                    n = window.Waypoint,
+                    r = window.onload;
+                (e.prototype.add = function (t) {
+                    var e = t.options.horizontal ? "horizontal" : "vertical";
+                    (this.waypoints[e][t.key] = t), this.refresh();
+                }),
+                    (e.prototype.checkEmpty = function () {
+                        var t = this.Adapter.isEmptyObject(this.waypoints.horizontal),
+                            e = this.Adapter.isEmptyObject(this.waypoints.vertical),
+                            i = this.element == this.element.window;
+                        t &&
+                            e &&
+                            !i &&
+                            (this.adapter.off(".waypoints"), delete o[this.key]);
+                    }),
+                    (e.prototype.createThrottledResizeHandler = function () {
+                        function t() {
+                            e.handleResize(), (e.didResize = !1);
+                        }
+                        var e = this;
+                        this.adapter.on("resize.waypoints", function () {
+                            e.didResize || ((e.didResize = !0), n.requestAnimationFrame(t));
+                        });
+                    }),
+                    (e.prototype.createThrottledScrollHandler = function () {
+                        function t() {
+                            e.handleScroll(), (e.didScroll = !1);
+                        }
+                        var e = this;
+                        this.adapter.on("scroll.waypoints", function () {
+                            (!e.didScroll || n.isTouch) &&
+                                ((e.didScroll = !0), n.requestAnimationFrame(t));
+                        });
+                    }),
+                    (e.prototype.handleResize = function () {
+                        n.Context.refreshAll();
+                    }),
+                    (e.prototype.handleScroll = function () {
+                        var t = {},
+                            e = {
+                                horizontal: {
+                                    newScroll: this.adapter.scrollLeft(),
+                                    oldScroll: this.oldScroll.x,
+                                    forward: "right",
+                                    backward: "left",
+                                },
+                                vertical: {
+                                    newScroll: this.adapter.scrollTop(),
+                                    oldScroll: this.oldScroll.y,
+                                    forward: "down",
+                                    backward: "up",
+                                },
+                            };
+                        for (var i in e) {
+                            var o = e[i],
+                                n = o.newScroll > o.oldScroll,
+                                r = n ? o.forward : o.backward;
+                            for (var s in this.waypoints[i]) {
+                                var a = this.waypoints[i][s];
+                                if (null !== a.triggerPoint) {
+                                    var l = o.oldScroll < a.triggerPoint,
+                                        h = o.newScroll >= a.triggerPoint,
+                                        p = l && h,
+                                        u = !l && !h;
+                                    (p || u) && (a.queueTrigger(r), (t[a.group.id] = a.group));
+                                }
+                            }
+                        }
+                        for (var c in t) t[c].flushTriggers();
+                        this.oldScroll = {
+                            x: e.horizontal.newScroll,
+                            y: e.vertical.newScroll,
+                        };
+                    }),
+                    (e.prototype.innerHeight = function () {
+                        return this.element == this.element.window
+                            ? n.viewportHeight()
+                            : this.adapter.innerHeight();
+                    }),
+                    (e.prototype.remove = function (t) {
+                        delete this.waypoints[t.axis][t.key], this.checkEmpty();
+                    }),
+                    (e.prototype.innerWidth = function () {
+                        return this.element == this.element.window
+                            ? n.viewportWidth()
+                            : this.adapter.innerWidth();
+                    }),
+                    (e.prototype.destroy = function () {
+                        var t = [];
+                        for (var e in this.waypoints)
+                            for (var i in this.waypoints[e]) t.push(this.waypoints[e][i]);
+                        for (var o = 0, n = t.length; n > o; o++) t[o].destroy();
+                    }),
+                    (e.prototype.refresh = function () {
+                        var t,
+                            e = this.element == this.element.window,
+                            i = e ? void 0 : this.adapter.offset(),
+                            o = {};
+                        this.handleScroll(),
+                            (t = {
+                                horizontal: {
+                                    contextOffset: e ? 0 : i.left,
+                                    contextScroll: e ? 0 : this.oldScroll.x,
+                                    contextDimension: this.innerWidth(),
+                                    oldScroll: this.oldScroll.x,
+                                    forward: "right",
+                                    backward: "left",
+                                    offsetProp: "left",
+                                },
+                                vertical: {
+                                    contextOffset: e ? 0 : i.top,
+                                    contextScroll: e ? 0 : this.oldScroll.y,
+                                    contextDimension: this.innerHeight(),
+                                    oldScroll: this.oldScroll.y,
+                                    forward: "down",
+                                    backward: "up",
+                                    offsetProp: "top",
+                                },
+                            });
+                        for (var r in t) {
+                            var s = t[r];
+                            for (var a in this.waypoints[r]) {
+                                var l,
+                                    h,
+                                    p,
+                                    u,
+                                    c,
+                                    d = this.waypoints[r][a],
+                                    f = d.options.offset,
+                                    w = d.triggerPoint,
+                                    y = 0,
+                                    g = null == w;
+                                d.element !== d.element.window &&
+                                    (y = d.adapter.offset()[s.offsetProp]),
+                                    "function" == typeof f
+                                        ? (f = f.apply(d))
+                                        : "string" == typeof f &&
+                                        ((f = parseFloat(f)),
+                                            d.options.offset.indexOf("%") > -1 &&
+                                            (f = Math.ceil((s.contextDimension * f) / 100))),
+                                    (l = s.contextScroll - s.contextOffset),
+                                    (d.triggerPoint = Math.floor(y + l - f)),
+                                    (h = w < s.oldScroll),
+                                    (p = d.triggerPoint >= s.oldScroll),
+                                    (u = h && p),
+                                    (c = !h && !p),
+                                    !g && u
+                                        ? (d.queueTrigger(s.backward), (o[d.group.id] = d.group))
+                                        : !g && c
+                                            ? (d.queueTrigger(s.forward), (o[d.group.id] = d.group))
+                                            : g &&
+                                            s.oldScroll >= d.triggerPoint &&
+                                            (d.queueTrigger(s.forward), (o[d.group.id] = d.group));
+                            }
+                        }
+                        return (
+                            n.requestAnimationFrame(function () {
+                                for (var t in o) o[t].flushTriggers();
+                            }),
+                            this
+                        );
+                    }),
+                    (e.findOrCreateByElement = function (t) {
+                        return e.findByElement(t) || new e(t);
+                    }),
+                    (e.refreshAll = function () {
+                        for (var t in o) o[t].refresh();
+                    }),
+                    (e.findByElement = function (t) {
+                        return o[t.waypointContextKey];
+                    }),
+                    (window.onload = function () {
+                        r && r(), e.refreshAll();
+                    }),
+                    (n.requestAnimationFrame = function (e) {
+                        var i =
+                            window.requestAnimationFrame ||
+                            window.mozRequestAnimationFrame ||
+                            window.webkitRequestAnimationFrame ||
+                            t;
+                        i.call(window, e);
+                    }),
+                    (n.Context = e);
+            })(),
+            (function () {
+                "use strict";
+                function t(t, e) {
+                    return t.triggerPoint - e.triggerPoint;
+                }
+                function e(t, e) {
+                    return e.triggerPoint - t.triggerPoint;
+                }
+                function i(t) {
+                    (this.name = t.name),
+                        (this.axis = t.axis),
+                        (this.id = this.name + "-" + this.axis),
+                        (this.waypoints = []),
+                        this.clearTriggerQueues(),
+                        (o[this.axis][this.name] = this);
+                }
+                var o = { vertical: {}, horizontal: {} },
+                    n = window.Waypoint;
+                (i.prototype.add = function (t) {
+                    this.waypoints.push(t);
+                }),
+                    (i.prototype.clearTriggerQueues = function () {
+                        this.triggerQueues = { up: [], down: [], left: [], right: [] };
+                    }),
+                    (i.prototype.flushTriggers = function () {
+                        for (var i in this.triggerQueues) {
+                            var o = this.triggerQueues[i],
+                                n = "up" === i || "left" === i;
+                            o.sort(n ? e : t);
+                            for (var r = 0, s = o.length; s > r; r += 1) {
+                                var a = o[r];
+                                (a.options.continuous || r === o.length - 1) &&
+                                    a.trigger([i]);
+                            }
+                        }
+                        this.clearTriggerQueues();
+                    }),
+                    (i.prototype.next = function (e) {
+                        this.waypoints.sort(t);
+                        var i = n.Adapter.inArray(e, this.waypoints),
+                            o = i === this.waypoints.length - 1;
+                        return o ? null : this.waypoints[i + 1];
+                    }),
+                    (i.prototype.previous = function (e) {
+                        this.waypoints.sort(t);
+                        var i = n.Adapter.inArray(e, this.waypoints);
+                        return i ? this.waypoints[i - 1] : null;
+                    }),
+                    (i.prototype.queueTrigger = function (t, e) {
+                        this.triggerQueues[e].push(t);
+                    }),
+                    (i.prototype.remove = function (t) {
+                        var e = n.Adapter.inArray(t, this.waypoints);
+                        e > -1 && this.waypoints.splice(e, 1);
+                    }),
+                    (i.prototype.first = function () {
+                        return this.waypoints[0];
+                    }),
+                    (i.prototype.last = function () {
+                        return this.waypoints[this.waypoints.length - 1];
+                    }),
+                    (i.findOrCreate = function (t) {
+                        return o[t.axis][t.name] || new i(t);
+                    }),
+                    (n.Group = i);
+            })(),
+            (function () {
+                "use strict";
+                function t(t) {
+                    this.$element = e(t);
+                }
+                var e = window.jQuery,
+                    i = window.Waypoint;
+                e.each(
+                    [
+                        "innerHeight",
+                        "innerWidth",
+                        "off",
+                        "offset",
+                        "on",
+                        "outerHeight",
+                        "outerWidth",
+                        "scrollLeft",
+                        "scrollTop",
+                    ],
+                    function (e, i) {
+                        t.prototype[i] = function () {
+                            var t = Array.prototype.slice.call(arguments);
+                            return this.$element[i].apply(this.$element, t);
+                        };
+                    }
+                ),
+                    e.each(["extend", "inArray", "isEmptyObject"], function (i, o) {
+                        t[o] = e[o];
+                    }),
+                    i.adapters.push({ name: "jquery", Adapter: t }),
+                    (i.Adapter = t);
+            })(),
+            (function () {
+                "use strict";
+                function t(t) {
+                    return function () {
+                        var i = [],
+                            o = arguments[0];
+                        return (
+                            t.isFunction(arguments[0]) &&
+                            ((o = t.extend({}, arguments[1])),
+                                (o.handler = arguments[0])),
+                            this.each(function () {
+                                var n = t.extend({}, o, { element: this });
+                                "string" == typeof n.context &&
+                                    (n.context = t(this).closest(n.context)[0]),
+                                    i.push(new e(n));
+                            }),
+                            i
+                        );
+                    };
+                }
+                var e = window.Waypoint;
+                window.jQuery && (window.jQuery.fn.waypoint = t(window.jQuery)),
+                    window.Zepto && (window.Zepto.fn.waypoint = t(window.Zepto));
+            })();
+
+        var aboutMe = $("#aboutMe");
+        var experience = $("#experience");
+        var experience1 = $("#experience1");
+        var weather = $("#weather");
+        var friend = $("#friend");
+        var fitness = $("#fitness");
+        var rock = $("#rock");
+        aboutMe.waypoint(
+            function () {
+                aboutMe.addClass("bounceInUp");
+                aboutMe.attr("style", "1");
+            },
+            { offset: "90%" }
+        );
+        experience.waypoint(
+            function () {
+                experience.addClass("bounceInUp");
+                experience.attr("style", "1");
+            },
+            { offset: "80%" }
+        );
+        experience1.waypoint(
+            function () {
+                experience1.addClass("bounceInUp");
+                experience1.attr("style", "1");
+            },
+            { offset: "80%" }
+        );
+        weather.waypoint(
+            function () {
+                weather.addClass("bounceInUp");
+                weather.attr("style", "1");
+            },
+            { offset: "80%" }
+        );
+        friend.waypoint(
+            function () {
+                friend.addClass("bounceInUp");
+                friend.attr("style", "1");
+            },
+            { offset: "80%" }
+        );
+
+        fitness.waypoint(
+            function () {
+                fitness.addClass("slower");
+                fitness.addClass("bounceInUp");
+                fitness.attr("style", "1");
+            },
+            { offset: "80%" }
+        );
+
+        rock.waypoint(
+            function () {
+                rock.addClass("slow");
+                rock.addClass("bounceInUp");
+                rock.attr("style", "1");
+            },
+            { offset: "80%" }
+        );
+
+        $(document).ready(function () {
+            $(".parallax").parallax();
+            $(".sidenav").sidenav();
+            $(".modal").modal();
+        });
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyA6-i0MKDnggzPJ2GcOu2PdBdrlN-ae16w",
+            authDomain: "portfolio-3db8f.firebaseapp.com",
+            databaseURL: "https://portfolio-3db8f.firebaseio.com",
+            projectId: "portfolio-3db8f",
+            storageBucket: "portfolio-3db8f.appspot.com",
+            messagingSenderId: "427664205665",
+            appId: "1:427664205665:web:35f634b1d1a7107ecf0720",
+            measurementId: "G-0K8TM869BF",
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+
+</html>
