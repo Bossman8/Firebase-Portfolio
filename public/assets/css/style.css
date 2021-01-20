@@ -70,19 +70,19 @@ html {
   scroll-behavior: smooth;
 }
 #weather {
-  width: 40% !important;
+  width: 100% !important;
   margin: 5px !important;
 }
 #friend {
-  width: 40% !important;
+  width: 100% !important;
   margin: 5px !important;
 }
 #fitness {
-  width: 40% !important;
+  width: 100% !important;
   margin: 5px !important;
 }
 #rock {
-  width: 40% !important;
+  width: 100% !important;
   margin: 5px !important;
 }
 #scroll {
